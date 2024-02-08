@@ -1,45 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste de Leitura de Tela com ARIA</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .button {
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Teste de Leitura de Tela com ARIA</h1>
-
-  <button class="button" onclick="announceMessage()" role="button" aria-live="polite">
-    Clique para anunciar uma mensagem
-  </button>
-
-  <script>
-    function announceMessage() {
-      // Obtém o botão
-      var button = document.querySelector('.button');
-
-      // Obtém a mensagem do botão
-      var message = button.innerText;
-
-      // Atualiza o conteúdo do botão para forçar a leitura de tela
-      button.innerHTML = ' Mensagem anunciada!';
-
-      // Restaura o conteúdo original após alguns segundos (simulando uma atualização dinâmica)
-      setTimeout(function() {
-        button.innerHTML = message;
-      }, 3000);
-    }
-  </script>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#000000" />
+    <title>Welcome to our Accessible Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
